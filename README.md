@@ -21,12 +21,13 @@ Libraries
 Example
 ==
 
+### Encrypt
 	encrypt (secret: string): string {
-		const publicKey: string = '-----BEGIN PUBLIC KEY-----YOUR KEY-----END PUBLIC KEY-----'
-		const key = new NodeRSA(publicKey)
-		const message = Buffer.from(secret)
-		const encrypted = key.encrypt(message, 'base64', 'utf8')
-		return encrypted.toString()
+      const publicKey: string = '-----BEGIN PUBLIC KEY-----YOUR KEY-----END PUBLIC KEY-----'
+      const key = new NodeRSA(publicKey)
+      const message = Buffer.from(secret)
+      const encrypted = key.encrypt(message, 'base64', 'utf8')
+      return encrypted.toString()
 	}
 
 
